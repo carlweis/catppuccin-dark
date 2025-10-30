@@ -32,7 +32,7 @@ const darkUIColorOverrides = {
 
   // Pmenu = { bg = '#212121' }, PmenuSel = { bg = '#212122', fg = '#e5c890' }
   "editorSuggestWidget.background": "#212121",
-  "editorSuggestWidget.selectedBackground": "#212122",
+  "editorSuggestWidget.selectedBackground": "#181818",
   "editorSuggestWidget.selectedForeground": "#e5c890",
 
   // VertSplit, WinSeparator = { fg = "#3b3b3b", bg = "none" }
@@ -55,7 +55,7 @@ const darkUIColorOverrides = {
   "tab.border": "#212121",
 
   // QuickFix = { bg = "#212121" }
-  "quickInput.background": "#212121",
+  "quickInput.background": "#181818",
   "quickInputList.focusBackground": "#212121",
 
   // Chat/Panel backgrounds should use base color

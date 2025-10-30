@@ -13,6 +13,10 @@ export const getUiColors = (
   const border = options.extraBordersEnabled
     ? opacity(palette.overlay1, 0.15)
     : transparent;
+  const listSelectionBackground = isLatte ? palette.surface0 : "#212121";
+  const listHoverBackground = isLatte
+    ? opacity(palette.surface0, 0.5)
+    : "#212121";
 
   // find the definitions here:
   // https://code.visualstudio.com/api/references/theme-color
@@ -305,16 +309,16 @@ export const getUiColors = (
     "inputValidation.warningForeground": palette.crust,
 
     // Lists and trees
-    "list.activeSelectionBackground": palette.surface0, // currently selected in file tree
+    "list.activeSelectionBackground": listSelectionBackground, // currently selected in file tree
     "list.activeSelectionForeground": palette.text,
     "list.dropBackground": dropBackground,
-    "list.focusBackground": palette.surface0, // when using keyboard to move around files
+    "list.focusBackground": listSelectionBackground, // when using keyboard to move around files
     "list.focusForeground": palette.text,
     "list.focusOutline": transparent,
     "list.highlightForeground": accent,
-    "list.hoverBackground": opacity(palette.surface0, 0.5), // when hovering over the file tree
+    "list.hoverBackground": listHoverBackground, // when hovering over lists/trees
     "list.hoverForeground": palette.text,
-    "list.inactiveSelectionBackground": palette.surface0, // currently selected focused in editor
+    "list.inactiveSelectionBackground": listSelectionBackground, // currently selected focused in editor
     "list.inactiveSelectionForeground": palette.text,
     "list.warningForeground": palette.peach,
     "listFilterWidget.background": palette.surface1,
@@ -555,6 +559,14 @@ export const getUiColors = (
     "symbolIcon.typeParameterForeground": palette.maroon,
     "symbolIcon.unitForeground": palette.text,
     "symbolIcon.variableForeground": palette.text,
+
+    // Quick pick / quick input
+    "quickInput.background": palette.base,
+    "quickInput.foreground": palette.text,
+    "quickInputList.focusBackground": listSelectionBackground,
+    "quickInputList.focusForeground": palette.text,
+    "quickInputList.focusIconForeground": accent,
+    "quickInputTitle.background": palette.base,
 
     // chart colors
     "charts.foreground": palette.text,
