@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.2 - 2025-10-30
+
+- Align list and quick pick selection highlights with #212121 for better contrast in the dark variant.
+
 ## [3.18.0](https://github.com/catppuccin/vscode/compare/catppuccin-vsc-v3.17.0...catppuccin-vsc-v3.18.0) (2025-08-27)
 
 
