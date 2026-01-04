@@ -11,21 +11,22 @@
     <a href="https://github.com/carlweis/catppuccin-dark/contributors"><img src="https://img.shields.io/github/contributors/carlweis/catppuccin-dark?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
 </p>
 
-> 🌙 **Ultra-dark variant of Catppuccin** - A fork featuring an even darker theme with custom colors for those who prefer minimal, low-contrast environments.</p>
+> 🌙 **Ultra-dark variant of Catppuccin** — for developers who prefer deep, muted interfaces that fade into the background while you focus on code.
 
 <p align="center">
   <img src="assets/darker.webp"/>
 </p>
 
-## What Makes This Different?
+## Why Catppuccin Darker?
 
-This darker variant features:
+Standard dark themes often feel too bright for extended coding sessions. This variant is designed for developers who want:
 
-- **Ultra-dark backgrounds**: `#181818` base, `#282828` mantle, `#292929` crust
-- **Subtle blue accents**: `#8AB4FB` instead of the default purple
-- **Minimal contrast**: Perfect for late-night coding sessions
-- **Consistent theming**: Every UI element carefully tuned for the darker palette
-- **All original flavors**: Latte, Frappé, Macchiato, and Mocha are still available
+- **True dark backgrounds** — `#181818` unified across editor, sidebar, tabs, and panels
+- **Seamless UI** — no jarring contrast between UI elements, everything flows together
+- **Subtle blue accents** — `#8AB5FA` for focus states, folder icons, and active tab indicators
+- **Cross-editor consistency** — matches Neovim, Ghostty, and tmux Catppuccin setups
+- **Easy on the eyes** — muted colors that reduce eye strain during late-night sessions
+- **All original flavors included** — Latte, Frappé, Macchiato, and Mocha still available
 
 ## Previews
 

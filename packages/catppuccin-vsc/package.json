@@ -5,7 +5,7 @@
   "displayName": "Catppuccin Darker for VSCode",
   "publisher": "codelogix",
   "description": "🌙 Ultra-dark variant of the Catppuccin theme for VSCode",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "icon": "icon.png",
   "galleryBanner": {
     "color": "#181818",
@@ -178,7 +178,7 @@
   },
   "__metadata": {
     "publisherDisplayName": "Carl Weis",
-    "publisherId": "codelogix",
+    "publisherId": "carlweis",
     "id": "catppuccin-darker-vsc",
     "isPreReleaseVersion": false
   },
