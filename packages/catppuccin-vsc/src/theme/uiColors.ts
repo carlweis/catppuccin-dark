@@ -13,10 +13,12 @@ export const getUiColors = (
   const border = options.extraBordersEnabled
     ? opacity(palette.overlay1, 0.15)
     : transparent;
-  const listSelectionBackground = isLatte ? palette.surface0 : "#212121";
+  const editorBackground = isLatte ? palette.base : "#1A1A1A";
+  const surroundingUI = isLatte ? palette.mantle : "#141414";
+  const listSelectionBackground = isLatte ? palette.surface0 : "#1A1A1A";
   const listHoverBackground = isLatte
     ? opacity(palette.surface0, 0.5)
-    : "#212121";
+    : "#141414";
 
   // find the definitions here:
   // https://code.visualstudio.com/api/references/theme-color
@@ -46,7 +48,7 @@ export const getUiColors = (
     "textSeparator.foreground": accent,
 
     // Activity Bar
-    "activityBar.background": palette.crust,
+    "activityBar.background": isLatte ? palette.crust : surroundingUI,
     "activityBar.foreground": accent,
     "activityBar.dropBorder": dropBackground,
     "activityBar.inactiveForeground": palette.overlay0,
@@ -65,7 +67,7 @@ export const getUiColors = (
     "badge.foreground": palette.text,
 
     "breadcrumb.activeSelectionForeground": accent,
-    "breadcrumb.background": palette.base,
+    "breadcrumb.background": editorBackground,
     "breadcrumb.focusForeground": accent,
     "breadcrumb.foreground": opacity(palette.text, 0.8),
     "breadcrumbPicker.background": palette.mantle,
@@ -165,7 +167,7 @@ export const getUiColors = (
     "diffEditorOverview.insertedForeground": opacity(palette.green, 0.8),
     "diffEditorOverview.removedForeground": opacity(palette.red, 0.8),
 
-    "editor.background": palette.base,
+    "editor.background": editorBackground,
     "editor.findMatchBackground": mix(palette.base, palette.red, 0.3),
     "editor.findMatchBorder": opacity(palette.red, 0.2),
     "editor.findMatchHighlightBackground": mix(palette.base, palette.sky, 0.3),
@@ -199,8 +201,8 @@ export const getUiColors = (
     "editorCursor.foreground": palette.rosewater,
     "editorGroup.border": palette.surface2,
     "editorGroup.dropBackground": dropBackground,
-    "editorGroup.emptyBackground": palette.base,
-    "editorGroupHeader.tabsBackground": palette.crust,
+    "editorGroup.emptyBackground": editorBackground,
+    "editorGroupHeader.tabsBackground": isLatte ? palette.crust : surroundingUI,
     "editorGutter.addedBackground": palette.green,
     "editorGutter.background": palette.base,
     "editorGutter.commentRangeForeground": palette.surface0,
@@ -208,7 +210,7 @@ export const getUiColors = (
     "editorGutter.deletedBackground": palette.red,
     "editorGutter.foldingControlForeground": palette.overlay2,
     "editorGutter.modifiedBackground": palette.yellow,
-    "editorHoverWidget.background": palette.mantle,
+    "editorHoverWidget.background": isLatte ? palette.mantle : surroundingUI,
     "editorHoverWidget.border": palette.surface2,
     "editorHoverWidget.foreground": palette.text,
     "editorIndentGuide.activeBackground": palette.surface2,
@@ -222,7 +224,7 @@ export const getUiColors = (
     "editorLineNumber.activeForeground": accent,
     "editorLineNumber.foreground": palette.overlay1,
     "editorLink.activeForeground": accent,
-    "editorMarkerNavigation.background": palette.mantle,
+    "editorMarkerNavigation.background": isLatte ? palette.mantle : surroundingUI,
     "editorMarkerNavigationError.background": palette.red,
     "editorMarkerNavigationInfo.background": palette.blue,
     "editorMarkerNavigationWarning.background": palette.peach,
@@ -234,13 +236,13 @@ export const getUiColors = (
     "editor.stackFrameHighlightBackground": opacity(palette.yellow, 0.15),
     "editor.focusedStackFrameHighlightBackground": opacity(palette.green, 0.15),
     "editorStickyScrollHover.background": palette.surface0,
-    "editorSuggestWidget.background": palette.mantle,
+    "editorSuggestWidget.background": isLatte ? palette.mantle : surroundingUI,
     "editorSuggestWidget.border": palette.surface2,
     "editorSuggestWidget.foreground": palette.text,
     "editorSuggestWidget.highlightForeground": accent,
     "editorSuggestWidget.selectedBackground": palette.surface0,
     "editorWhitespace.foreground": opacity(palette.overlay2, 0.4),
-    "editorWidget.background": palette.mantle,
+    "editorWidget.background": isLatte ? palette.mantle : surroundingUI,
     "editorWidget.foreground": palette.text,
     "editorWidget.resizeBorder": palette.surface2,
     "editorLightBulb.foreground": palette.yellow,
@@ -361,17 +363,17 @@ export const getUiColors = (
 
     "notificationCenter.border": accent,
     "notificationCenterHeader.foreground": palette.text,
-    "notificationCenterHeader.background": palette.mantle,
+    "notificationCenterHeader.background": isLatte ? palette.mantle : surroundingUI,
     "notificationToast.border": accent,
     "notifications.foreground": palette.text,
-    "notifications.background": palette.mantle,
+    "notifications.background": isLatte ? palette.mantle : surroundingUI,
     "notifications.border": accent,
     "notificationLink.foreground": palette.blue,
     "notificationsErrorIcon.foreground": palette.red,
     "notificationsWarningIcon.foreground": palette.peach,
     "notificationsInfoIcon.foreground": palette.blue,
 
-    "panel.background": palette.base,
+    "panel.background": editorBackground,
     "panel.border": palette.surface2,
     "panelSection.border": palette.surface2,
     "panelSection.dropBackground": dropBackground,
@@ -381,17 +383,17 @@ export const getUiColors = (
 
     // peek view colors
     "peekView.border": accent,
-    "peekViewEditor.background": palette.mantle,
-    "peekViewEditorGutter.background": palette.mantle,
+    "peekViewEditor.background": isLatte ? palette.mantle : surroundingUI,
+    "peekViewEditorGutter.background": isLatte ? palette.mantle : surroundingUI,
     "peekViewEditor.matchHighlightBackground": opacity(palette.sky, 0.3),
     "peekViewEditor.matchHighlightBorder": transparent,
-    "peekViewResult.background": palette.mantle,
+    "peekViewResult.background": isLatte ? palette.mantle : surroundingUI,
     "peekViewResult.fileForeground": palette.text,
     "peekViewResult.lineForeground": palette.text,
     "peekViewResult.matchHighlightBackground": opacity(palette.sky, 0.3),
     "peekViewResult.selectionBackground": palette.surface0,
     "peekViewResult.selectionForeground": palette.text,
-    "peekViewTitle.background": palette.base,
+    "peekViewTitle.background": editorBackground,
     "peekViewTitleDescription.foreground": opacity(palette.subtext1, 0.7),
     "peekViewTitleLabel.foreground": palette.text,
 
@@ -400,7 +402,7 @@ export const getUiColors = (
 
     "progressBar.background": accent,
 
-    "scrollbar.shadow": palette.crust,
+    "scrollbar.shadow": isLatte ? palette.crust : surroundingUI,
     "scrollbarSlider.activeBackground": opacity(palette.surface0, 0.4),
     "scrollbarSlider.background": opacity(palette.surface2, 0.5),
     "scrollbarSlider.hoverBackground": palette.overlay0,
@@ -415,11 +417,11 @@ export const getUiColors = (
     "settings.numberInputBackground": palette.surface1,
     "settings.numberInputBorder": transparent,
 
-    "sideBar.background": palette.mantle,
+    "sideBar.background": isLatte ? palette.mantle : surroundingUI,
     "sideBar.dropBackground": dropBackground,
     "sideBar.foreground": palette.text,
     "sideBar.border": border,
-    "sideBarSectionHeader.background": palette.mantle,
+    "sideBarSectionHeader.background": isLatte ? palette.mantle : surroundingUI,
     "sideBarSectionHeader.foreground": palette.text,
     "sideBarTitle.foreground": accent,
 
@@ -429,11 +431,11 @@ export const getUiColors = (
     "banner.iconForeground": palette.text,
 
     // Status Bar
-    "statusBar.background": palette.crust,
+    "statusBar.background": isLatte ? palette.crust : surroundingUI,
     "statusBar.foreground": palette.text,
     "statusBar.border": border,
     // having no folder open shouldn't change the bar
-    "statusBar.noFolderBackground": palette.crust,
+    "statusBar.noFolderBackground": isLatte ? palette.crust : surroundingUI,
     "statusBar.noFolderForeground": palette.text,
     "statusBar.noFolderBorder": border,
     // debugging is peach
@@ -458,30 +460,30 @@ export const getUiColors = (
     "commandCenter.foreground": palette.subtext1,
     "commandCenter.inactiveForeground": palette.subtext1,
     "commandCenter.activeForeground": accent,
-    "commandCenter.background": palette.mantle,
+    "commandCenter.background": isLatte ? palette.mantle : surroundingUI,
     "commandCenter.activeBackground": opacity(palette.surface2, 0.2),
     "commandCenter.border": border,
     "commandCenter.inactiveBorder": border,
     "commandCenter.activeBorder": accent,
 
     // Tab Bar
-    "tab.activeBackground": palette.base,
+    "tab.activeBackground": editorBackground,
     "tab.activeBorder": transparent,
     "tab.activeBorderTop": accent,
     "tab.activeForeground": accent,
     "tab.activeModifiedBorder": palette.yellow,
     "tab.border": palette.mantle,
-    "tab.hoverBackground": shade(palette.base, 0.05),
+    "tab.hoverBackground": shade(editorBackground, 0.05),
     "tab.hoverBorder": transparent,
     "tab.hoverForeground": accent,
-    "tab.inactiveBackground": palette.mantle,
+    "tab.inactiveBackground": isLatte ? palette.mantle : surroundingUI,
     "tab.inactiveForeground": palette.overlay0,
     "tab.inactiveModifiedBorder": opacity(palette.yellow, 0.3),
     "tab.lastPinnedBorder": accent,
-    "tab.unfocusedActiveBackground": palette.mantle,
+    "tab.unfocusedActiveBackground": isLatte ? palette.mantle : surroundingUI,
     "tab.unfocusedActiveBorder": transparent,
     "tab.unfocusedActiveBorderTop": opacity(accent, 0.3),
-    "tab.unfocusedInactiveBackground": shade(palette.mantle, -0.05),
+    "tab.unfocusedInactiveBackground": shade(isLatte ? palette.mantle : surroundingUI, -0.05),
 
     // Terminal
     "terminal.foreground": palette.text,
@@ -513,14 +515,14 @@ export const getUiColors = (
     "terminalCommandDecoration.errorBackground": palette.red,
 
     // title bar
-    "titleBar.activeBackground": palette.crust,
+    "titleBar.activeBackground": isLatte ? palette.crust : surroundingUI,
     "titleBar.activeForeground": palette.text,
-    "titleBar.inactiveBackground": palette.crust,
+    "titleBar.inactiveBackground": isLatte ? palette.crust : surroundingUI,
     "titleBar.inactiveForeground": opacity(palette.text, 0.5),
     "titleBar.border": border,
 
     // welcome page
-    "welcomePage.tileBackground": palette.mantle,
+    "welcomePage.tileBackground": isLatte ? palette.mantle : surroundingUI,
     "welcomePage.progress.background": palette.crust,
     "welcomePage.progress.foreground": accent,
     "walkThrough.embeddedEditorBackground": opacity(palette.base, 0.3),
@@ -561,12 +563,12 @@ export const getUiColors = (
     "symbolIcon.variableForeground": palette.text,
 
     // Quick pick / quick input
-    "quickInput.background": palette.base,
+    "quickInput.background": editorBackground,
     "quickInput.foreground": palette.text,
     "quickInputList.focusBackground": listSelectionBackground,
     "quickInputList.focusForeground": palette.text,
     "quickInputList.focusIconForeground": accent,
-    "quickInputTitle.background": palette.base,
+    "quickInputTitle.background": editorBackground,
 
     // chart colors
     "charts.foreground": palette.text,

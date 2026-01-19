@@ -11,15 +11,15 @@ import type {
 // Custom dark flavor color overrides based on Neovim/Ghostty/tmux palette
 // base = editor background, mantle = surface, crust = deeper surface
 const darkColorOverrides = {
-  base: "#181818", // Editor background
-  mantle: "#212121", // Surface (sidebar/panels/tabs)
-  crust: "#141414", // Deeper surface (status bar/title bar)
+  base: "#1A1A1A", // Editor background
+  mantle: "#181818", // Surface (sidebar/panels/tabs)
+  crust: "#181818", // Deeper surface (status bar/title bar)
 };
 
 // Custom dark flavor UI color overrides matching Neovim/Ghostty/tmux palette
 // Target palette:
-// - editor background: #181818
-// - UI background (sidebar/panels/tabs): #181818 (unified with editor)
+// - editor background: #101012
+// - UI background (sidebar/panels/tabs): #181818
 // - deeper surface (status bar/title bar): #141414
 // - borders/separators: #3b3b3b
 // - default fg: #cdd6f4
@@ -31,7 +31,7 @@ const darkUIColorOverrides = {
   // ============================================
   // EDITOR
   // ============================================
-  "editor.background": "#181818",
+  "editor.background": "#1A1A1A",
   "editor.foreground": "#cdd6f4",
   "editor.lineHighlightBackground": "#212121",
   "editor.lineHighlightBorder": "#00000000",
@@ -50,7 +50,7 @@ const darkUIColorOverrides = {
   "editorCursor.foreground": "#cdd6f4",
 
   // Editor gutter/line numbers
-  "editorGutter.background": "#181818",
+  "editorGutter.background": "#1A1A1A",
   "editorLineNumber.foreground": "#585b70",
   "editorLineNumber.activeForeground": "#cdd6f4",
 
